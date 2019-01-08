@@ -115,3 +115,4 @@ dmypy.json
 
 .vscode/settings.json
 .idea/*
+twitter_credentials.json
