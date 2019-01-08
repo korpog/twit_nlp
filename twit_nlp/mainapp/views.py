@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from twython import Twython  
+import json
 
-# Create your views here.
+with open('twitter_credentials.json', 'r') as file:
+    credentials = json.load(file)
+
+def list_tweets(request):
+    pass
+
+
