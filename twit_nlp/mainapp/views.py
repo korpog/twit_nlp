@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from twython import Twython  
-import json
+from forms import QueryForm
+from . import utils
 
-with open('twitter_credentials.json', 'r') as file:
-    credentials = json.load(file)
 
 def list_tweets(request):
-    pass
-
-
+    if request.method == 'POST':
+        form = QueryForm(request.POST)
+        if form.is_valid():
+            pass
+    else:
+        form = QueryForm()
+    return render(request, 'results.html', {'form': form})
