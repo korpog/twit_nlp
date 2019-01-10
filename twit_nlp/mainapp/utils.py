@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 
-def get_query(query_term):
+def get_query_results(query_term):
     with open('twitter_credentials.json', 'r') as file:
         credentials = json.load(file)
 

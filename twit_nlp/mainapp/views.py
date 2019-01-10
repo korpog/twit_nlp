@@ -1,13 +1,15 @@
-from django.shortcuts import render
-from forms import QueryForm
-from . import utils
+from django.shortcuts import render, redirect
+from .forms import QueryForm
+from .utils import tweets_to_dict, get_query_results
 
 
 def list_tweets(request):
     if request.method == 'POST':
         form = QueryForm(request.POST)
         if form.is_valid():
-            pass
+            query = form.cleaned_data['query']
+            tweets_to_dict(get_query_results(query))
+            return redirect('results')
     else:
         form = QueryForm()
-    return render(request, 'results.html', {'form': form})
+    return render(request, 'index.html', {'form': form})
