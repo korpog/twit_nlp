@@ -12,7 +12,7 @@ def get_query_results(query_term):
 
     query = {'q': query_term,
              'result_type': 'popular',
-             'count': 100,
+             'count': 5,
              'lang': 'en',
              }
 

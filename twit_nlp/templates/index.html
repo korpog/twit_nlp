@@ -4,11 +4,14 @@
 
 <div class="jumbotron">
     <h1 class="display-4">Hello, world!</h1>
-    <hr class="my-4">
+    <hr class="my-3">
     <p>Stuff will go here</p>
 </div>
 <form method="post">
+    {% csrf_token %}
     {{form.as_p}}
-    <button type="submit" class="btn btn-info">Submit</button>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-info">Go!</button>
+    </div>
 </form>
 {% endblock %}

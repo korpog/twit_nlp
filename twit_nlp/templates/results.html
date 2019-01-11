@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Results{% endblock title %}
+
+{% block content %}
+<ul>
+{% for tweet in tweets_dict %}
+<li>{{tweets_dict.user}} : {{tweets_dict.text}}
+{% endfor %}
+</ul>
+{% endblock %}
