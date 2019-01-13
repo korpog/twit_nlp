@@ -7,11 +7,15 @@
     <hr class="my-3">
     <p>Stuff will go here</p>
 </div>
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-info">Go!</button>
-    </div>
-</form>
+<div class="d-flex justify-content-center" id="forms-panel">
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.query.errors }}
+        {{ form.query }}
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-info">Go!</button>
+        </div>
+    </form>
+</div>
 {% endblock %}

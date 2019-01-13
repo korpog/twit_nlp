@@ -3,10 +3,18 @@ body {
 }
 
 .navbar {
-    background-color: darkslategrey;
+    background-color: steelblue;
     border-radius: 5px;
 }
 
 .jumbotron {
     background-color: antiquewhite;
+    margin: 0;
+}
+
+#forms-panel {
+    background-color: steelblue;
+    border-radius: 5px;
+    margin-top: 0;
+    padding: 1rem;
 }

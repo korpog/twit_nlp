@@ -3,9 +3,18 @@
 {% block title %}Results{% endblock title %}
 
 {% block content %}
-<ul>
-{% for tweet in tweets_dict %}
-<li>{{tweets_dict.user}} : {{tweets_dict.text}}
-{% endfor %}
-</ul>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">User</th>
+      <th scope="col">Tweet text</th>
+    </tr>
+  </thead>
+    <tbody>
+        <tr>
+            <td>{{tweets_dict.user}}</td>
+            <td>{{tweets_dict.text}}</td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}

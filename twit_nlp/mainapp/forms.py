@@ -6,4 +6,4 @@ class QueryForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['query'].widget.attrs.update(
-            {'class': 'form-control'})
+            {'class': 'form-control', 'placeholder': 'Enter query here'})
