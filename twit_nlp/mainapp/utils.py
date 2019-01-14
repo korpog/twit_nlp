@@ -4,6 +4,11 @@ import pandas as pd
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 
+def get_sentiment(tweet_text):
+    sid = SentimentIntensityAnalyzer()
+    sentiment = sid.polarity_scores(tweet_text)
+    return sentiment
+
 def get_query_results(query_term):
     with open('twitter_credentials.json', 'r') as file:
         credentials = json.load(file)
@@ -21,12 +26,13 @@ def get_query_results(query_term):
 
 
 def tweets_to_dict(tweets):
-    tweets_dict = {'user': [], 'text': []}
+    tweets_dict = {'user': [], 'text': [], 'sentiment': []}
     t_list = []
     for status in tweets['statuses']:
         username = status['user']['name']
         text = status['text']
-        dict_ = {'user': username, 'text': text}
+        sentiment = get_sentiment(text)
+        dict_ = {'user': username, 'text': text, 'sentiment': sentiment}
         t_list.append(dict_)
         tweets_dict['user'].append(status['user']['name'])
         tweets_dict['text'].append(status['text'])
