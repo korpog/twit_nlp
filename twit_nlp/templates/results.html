@@ -10,11 +10,14 @@
       <th scope="col">Tweet text</th>
     </tr>
   </thead>
-    <tbody>
-        <tr>
-            <td>{{tweets_dict.user}}</td>
-            <td>{{tweets_dict.text}}</td>
-        </tr>
-    </tbody>
+  <tbody>
+    {% for tweet in tweets_dict %} <tr>
+      {% for key , value in tweet.items  %}
+      <td>{{ value }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+
+  </tbody>
 </table>
 {% endblock %}

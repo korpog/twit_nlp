@@ -1,6 +1,7 @@
 from twython import Twython
 import json
 import pandas as pd
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 
 def get_query_results(query_term):
@@ -12,7 +13,7 @@ def get_query_results(query_term):
 
     query = {'q': query_term,
              'result_type': 'popular',
-             'count': 5,
+             'count': 10,
              'lang': 'en',
              }
 
@@ -21,7 +22,12 @@ def get_query_results(query_term):
 
 def tweets_to_dict(tweets):
     tweets_dict = {'user': [], 'text': []}
+    t_list = []
     for status in tweets['statuses']:
+        username = status['user']['name']
+        text = status['text']
+        dict_ = {'user': username, 'text': text}
+        t_list.append(dict_)
         tweets_dict['user'].append(status['user']['name'])
         tweets_dict['text'].append(status['text'])
-    return tweets_dict
+    return t_list
