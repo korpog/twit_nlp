@@ -25,8 +25,7 @@ def get_query_results(query_term):
     return tweets.search(**query)
 
 
-def tweets_to_dict(tweets):
-    tweets_dict = {'user': [], 'text': [], 'sentiment': []}
+def get_tweets_data(tweets):
     t_list = []
     for status in tweets['statuses']:
         username = status['user']['name']
@@ -34,6 +33,4 @@ def tweets_to_dict(tweets):
         sentiment = get_sentiment(text)
         dict_ = {'user': username, 'text': text, 'sentiment': sentiment}
         t_list.append(dict_)
-        tweets_dict['user'].append(status['user']['name'])
-        tweets_dict['text'].append(status['text'])
     return t_list
