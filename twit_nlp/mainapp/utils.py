@@ -31,6 +31,6 @@ def get_tweets_data(tweets):
         username = status['user']['name']
         text = status['text']
         sentiment = get_sentiment(text)
-        dict_ = {'user': username, 'text': text, 'sentiment': sentiment}
+        dict_ = {'user': username, 'text': text, 'sentiment': sentiment['compound']}
         t_list.append(dict_)
     return t_list
