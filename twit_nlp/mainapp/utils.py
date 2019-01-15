@@ -26,11 +26,11 @@ def get_query_results(query_term):
 
 
 def get_tweets_data(tweets):
-    t_list = []
+    tweets_list = []
     for status in tweets['statuses']:
         username = status['user']['name']
         text = status['text']
         sentiment = get_sentiment(text)
         dict_ = {'user': username, 'text': text, 'sentiment': sentiment['compound']}
-        t_list.append(dict_)
-    return t_list
+        tweets_list.append(dict_)
+    return tweets_list

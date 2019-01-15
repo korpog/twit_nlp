@@ -14,7 +14,7 @@
   <tbody>
     {% for tweet in tweets_data %} <tr>
       {% for key, value in tweet.items %}
-      <td>{{ value }}</td>
+      <td class="{{key}}">{{ value }}</td>
       {% endfor %}
     </tr>
     {% endfor %}
