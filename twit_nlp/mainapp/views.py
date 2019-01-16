@@ -8,7 +8,8 @@ def list_tweets(request):
         form = QueryForm(request.POST)
         if form.is_valid():
             query = form.cleaned_data['query']
-            tweets_data = get_tweets_data(get_query_results(query))
+            num_of_tweets = form.cleaned_data['num_of_tweets']
+            tweets_data = get_tweets_data(get_query_results(query, num_of_tweets))
             return render(request, 'results.html', {'tweets_data': tweets_data})
     else:
         form = QueryForm()

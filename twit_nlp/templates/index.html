@@ -3,9 +3,10 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <hr class="my-3">
-    <p>Enter your query and get most popular tweets with their positivity sentiment</p>
+    <h1 class="display-4">The Word As Power</h1>
+    <hr class="my-2">
+    <p>Enter your query and get most popular tweets with their positivity sentiment.<br>
+    Created with the help of <a href="https://www.nltk.org/_modules/nltk/sentiment/vader.html">Vader</a></p>
 </div>
 <div class="d-flex justify-content-center" id="forms-panel">
     <form method="post" class="form-inline">
@@ -18,6 +19,9 @@
         <div class="input-group mb-2 mr-sm-2">
             {{ form.non_field_errors }}
             {{ form.num_of_tweets.errors }}
+            <div class="input-group-prepend">
+                <div class="input-group-text">How many tweets?</div>
+            </div>
             {{ form.num_of_tweets }}
         </div>
         <div class="input-group mb-2 mr-sm-2">
