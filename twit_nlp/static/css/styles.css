@@ -2,6 +2,11 @@ body {
     background-color: white;
 }
 
+td.sentiment {
+    text-align: center;
+    vertical-align: middle;
+}
+
 .navbar {
     background-color: steelblue;
     border-radius: 5px;
