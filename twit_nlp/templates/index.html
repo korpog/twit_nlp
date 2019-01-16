@@ -5,15 +5,22 @@
 <div class="jumbotron">
     <h1 class="display-4">Hello, world!</h1>
     <hr class="my-3">
-    <p>Stuff will go here</p>
+    <p>Enter your query and get most popular tweets with their positivity sentiment</p>
 </div>
 <div class="d-flex justify-content-center" id="forms-panel">
     <form method="post" class="form-inline">
         {% csrf_token %}
-        {{ form.non_field_errors }}
-        {{ form.query.errors }}
-        {{ form.query }}
-        <div class="d-flex justify-content-center">
+        <div class="input-group mb-2 mr-sm-2">
+            {{ form.non_field_errors }}
+            {{ form.query.errors }}
+            {{ form.query }}
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            {{ form.non_field_errors }}
+            {{ form.num_of_tweets.errors }}
+            {{ form.num_of_tweets }}
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
             <button type="submit" class="btn btn-info">Go!</button>
         </div>
     </form>

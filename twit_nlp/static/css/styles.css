@@ -13,7 +13,7 @@ td.sentiment {
 }
 
 .jumbotron {
-    background-color: antiquewhite;
+    background: linear-gradient(to bottom, #ffd65e 0%,#febf04 100%);
     margin: 0;
 }
 
