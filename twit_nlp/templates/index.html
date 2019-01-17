@@ -13,13 +13,11 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col text-center pt-3 index-panel" id="sentiment-box">
-            <a href="" class="btn btn-primary">Twitter Sentiment Analysis</a>
-            <p class="">Enter a query and find out which </p>
+        <div class="col text-center py-3 index-panel" id="sentiment-box">
+            <a href="{% url 'sentiment' %}" class="btn btn-primary btn-lg">Twitter Sentiment Analysis</a>
         </div>
-        <div class="col text-center pt-3 index-panel" id="stats-box">
-            <a href="" class="btn btn-primary">Text Statistics</a>
-            <p>Get text statistics</p>
+        <div class="col text-center py-3 index-panel" id="stats-box">
+            <a href="" class="btn btn-primary btn-lg">Text Statistics</a>
         </div>
     </div>
     {% endblock %}
