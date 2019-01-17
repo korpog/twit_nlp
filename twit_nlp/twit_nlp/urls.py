@@ -19,7 +19,7 @@ from django.views.generic.base import TemplateView
 from mainapp.views import list_tweets
 
 urlpatterns = [
-    path('', list_tweets, name="index"),
+    path('', TemplateView.as_view(template_name='index.html'), name="index"),
     path('admin/', admin.site.urls),
     path('main/', include('mainapp.urls')),
 ]

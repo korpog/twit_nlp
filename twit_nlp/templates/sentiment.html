@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Twitter Sentiment Analysis{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center" id="sentiment-form">
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        <div class="input-group mb-2 mr-sm-2">
+            {{ form.non_field_errors }}
+            {{ form.query.errors }}
+            {{ form.query }}
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            {{ form.non_field_errors }}
+            {{ form.num_of_tweets.errors }}
+            <div class="input-group-prepend">
+                <div class="input-group-text">How many tweets?</div>
+            </div>
+            {{ form.num_of_tweets }}
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+            <button type="submit" class="btn btn-info">Go!</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

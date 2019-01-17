@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background: white;
 }
 
 td.sentiment {
@@ -7,17 +7,33 @@ td.sentiment {
     vertical-align: middle;
 }
 
+.index-panel {
+    border-radius: 5px;
+}
+
+#sentiment-box {
+    background: linear-gradient(to bottom, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+}
+
+#stats-box {
+    background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+}
+
 .navbar {
-    background-color: steelblue;
+    background: steelblue;
     border-radius: 5px;
 }
 
 .jumbotron {
-    background: linear-gradient(to bottom, #ffd65e 0%,#febf04 100%);
+    background: linear-gradient(to bottom, #ffd65e 0%, #febf04 100%);
     margin: 0;
 }
 
-#forms-panel {
+.blockquote-footer {
+    color: dimgray;
+}
+
+#sentiment-form {
     background-color: steelblue;
     border-radius: 5px;
     margin-top: 0;
