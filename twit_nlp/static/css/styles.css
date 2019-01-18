@@ -11,12 +11,8 @@ td.sentiment {
     border-radius: 5px;
 }
 
-#sentiment-box {
-    background: linear-gradient(to bottom, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
-}
-
-#stats-box {
-    background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+.title-panel {
+    background: #c3d9ff;
 }
 
 .navbar {
@@ -33,9 +29,17 @@ td.sentiment {
     color: dimgray;
 }
 
-#sentiment-form {
+#my-form {
     background: linear-gradient(to bottom, #ffd65e 0%, #febf04 100%);
     border-radius: 5px;
     margin-top: 0.1rem;
     padding: 1rem;
+}
+
+#sentiment-box {
+    background: linear-gradient(to bottom, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+}
+
+#stats-box {
+    background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
 }

@@ -4,8 +4,8 @@
 <div class="jumbotron">
     <h1 class="display-4">The Word As Power</h1>
     <blockquote class="blockquote">
-        <p class="mb-0">The limits of my language mean the limits of my world.</p>
-        <footer class="blockquote-footer">Ludwig Wittgenstein</footer>
+        <p class="mb-0">I know words. I have the best words!</p>
+        <footer class="blockquote-footer">Donald Trump</footer>
     </blockquote>
     <hr class="my-2">
     <p>Enter your query and get most popular tweets with their positivity sentiment.<br>
@@ -17,9 +17,9 @@
             <a href="{% url 'sentiment' %}" class="btn btn-primary btn-lg">Twitter Sentiment Analysis</a>
         </div>
         <div class="col text-center py-3 index-panel" id="stats-box">
-            <a href="" class="btn btn-primary btn-lg">Text Statistics</a>
+            <a href="{% url 'statistics' %}" class="btn btn-primary btn-lg">Text Statistics</a>
         </div>
     </div>
-    {% endblock %}
-    {% block javascript %}
-    {% endblock %}
+{% endblock %}
+{% block javascript %}
+{% endblock %}
