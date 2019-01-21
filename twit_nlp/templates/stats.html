@@ -9,10 +9,12 @@
         <h3 class="pt-2">
             Linguistic Statistics
         </h3>
-    </div>
+    </div>    
 
 <div class="row my-0 justify-content-center" id="my-form">
     <form method="post" class=""">
+    {% csrf_token %}
+    {{form}}
         <div class="input-group mb-2 mr-sm-2">
             <button type="submit" class="btn btn-success">Go!</button>
         </div>

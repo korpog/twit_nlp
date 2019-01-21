@@ -26,6 +26,11 @@
             </div>
             {{ form.num_of_tweets }}
         </div>
+            <div class="input-group mb-2 mr-sm-2">
+            {{ form.non_field_errors }}
+            {{ form.result_type.errors }}
+            {{ form.result_type }}
+        </div>
         <div class="input-group mb-2 mr-sm-2">
             <button type="submit" class="btn btn-success">Go!</button>
         </div>
