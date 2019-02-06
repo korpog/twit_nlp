@@ -9,7 +9,7 @@ def get_sentiment(tweet_text):
     sentiment = sid.polarity_scores(tweet_text)
     return sentiment
 
-def get_query_results(query_term, num_of_tweets):
+def get_query_results(query_term, num_of_tweets, result_type):
     with open('twitter_credentials.json', 'r') as file:
         credentials = json.load(file)
 
@@ -17,7 +17,7 @@ def get_query_results(query_term, num_of_tweets):
                      credentials['CONSUMER_SECRET'])
 
     query = {'q': query_term,
-             'result_type': 'popular',
+             'result_type': result_type,
              'count': num_of_tweets,
              'lang': 'en',
              }
