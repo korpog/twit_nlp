@@ -1,27 +1,15 @@
 from django.shortcuts import render, redirect
+from django.views.generic import FormView
 from .forms import TwitterForm, StatsForm
 from .utils import get_tweets_data, get_query_results
 
+class TwitterFormView(FormView):
+    form_class = TwitterForm
+    template_name = "index.html"
 
-def get_twitter_sentiment(request):
-    if request.method == 'POST':
-        form = TwitterForm(request.POST)
-        if form.is_valid():
+    def form_valid(self, form):
             query = form.cleaned_data['query']
             num_of_tweets = form.cleaned_data['num_of_tweets']
             result_type = form.cleaned_data['result_type']
             tweets_data = get_tweets_data(get_query_results(query, num_of_tweets, result_type))
-            return render(request, 'results_sentiment.html', {'tweets_data': tweets_data})
-    else:
-        form = TwitterForm()
-    return render(request, 'sentiment.html', {'form': form})
-
-def get_stats(request):
-    if request.method == 'POST':
-        form = StatsForm(request.POST)
-        if form.is_valid():
-            something = form.cleaned_data['num_of_something']
-            return render(request, 'results_stats.html', {'something': something})
-    else:
-        form = StatsForm()
-    return render(request, 'stats.html', {'form': form})
+            return render(self.request, 'results_sentiment.html', {'tweets_data': tweets_data})

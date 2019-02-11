@@ -2,6 +2,18 @@ body {
     background: cornsilk;
 }
 
+table.table-bordered {
+    border: 1px solid slategray;
+}
+
+table.table-bordered>thead>tr>th {
+    border: 1px solid slategray;
+}
+
+table.table-bordered>tbody>tr>td {
+    border: 1px solid slategray;
+}
+
 td.sentiment {
     text-align: center;
     vertical-align: middle;
@@ -30,7 +42,7 @@ td.sentiment {
 }
 
 #my-form {
-    background: linear-gradient(to bottom, #ffd65e 0%, #febf04 100%);
+    background: steelblue;
     border-radius: 5px;
     margin-top: 0.1rem;
     padding: 1rem;

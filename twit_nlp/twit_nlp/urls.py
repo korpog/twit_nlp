@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
-from mainapp.views import get_twitter_sentiment
+from mainapp.views import TwitterFormView
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html'), name="index"),
+    path('', TwitterFormView.as_view(), name="index"),
     path('admin/', admin.site.urls),
     path('main/', include('mainapp.urls')),
 ]
