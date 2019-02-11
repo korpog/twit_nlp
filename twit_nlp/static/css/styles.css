@@ -37,9 +37,5 @@ td.sentiment {
 }
 
 #sentiment-box {
-    background: linear-gradient(to bottom, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
-}
-
-#stats-box {
-    background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    background: steelblue;
 }
